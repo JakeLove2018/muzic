@@ -1,77 +1,52 @@
-<!--index.wxml-->
 <view class="container">
-
-  <!-- 用户 openid -->
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}" calss="userinfo-opendata">
-      <view class="userinfo-block-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button 
-        wx:if="{{canIUseGetUserProfile}}" 
-        bindtap="getUserProfile"
-        class="userinfo-avatar"
-        style="background-image: url({{avatarUrl}})"
-        size="default"
-      ></button>
-      <button
-        wx:else
-        open-type="getUserInfo" 
-        bindgetuserinfo="onGetUserInfo"
-        class="userinfo-avatar"
-        style="background-image: url({{avatarUrl}})"
-        size="default"
-      ></button>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-block-avatar" src="{{avatarUrl}}" mode="cover"></image>
-    </block>
-    <view class="userinfo-nickname-wrapper">
-      <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+    <!-- 轮播图 -->
+    <swiper class="banner" indicator-dots="true" indicator-color="ivory" indicator-active-color="#E34343" circular easing-function="easeInOutCubic" interval="3000" duration="1000" >
+        <swiper-item wx:for="{{bannerList}}" wx:key="targetId">
+           <image src="{{item.imageUrl}}"></image>
+           <text class="typeTitle">{{item.typeTitle}}</text>
+        </swiper-item>
+    </swiper>
+    <!-- 轮播图end -->
+    <!-- 导航栏 -->
+    <view class="navContainer">
+        <view class="navItem">
+            <text class="iconfont iconmeirituijian"></text>
+            <text>每日推荐</text>
+        </view>
+        <view class="navItem">
+            <text class="iconfont iconmugedan"></text>
+            <text>歌单</text>
+        </view>
+        <view class="navItem">
+            <text class="iconfont iconpaihangbang"></text>
+            <text>排行榜</text>
+        </view>
+        <view class="navItem">
+            <text class="iconfont icondiantaiyinpinzhibozhong"></text>
+            <text>电台</text>
+        </view>
+        <view class="navItem">
+            <text class="iconfont iconicon-rgb_smv"></text>
+            <text>最新MV</text>
+        </view>
     </view>
-  </view>
-
-
-  <!-- 上传图片 -->
-  <view class="uploader">
-    <view class="uploader-text" bindtap="doUpload">
-      <text>上传图片</text>
+    <!-- 导航栏 -->
+    <!-- 推荐歌曲 -->
+    <view class="recommendContainer">
+        <view class="header">
+            <text class="title">推荐歌单</text>
+            <view>
+                <text>今日最新推荐</text>
+                <text class="more">查看更多>></text>
+                
+            </view>
+        </view>
+        <scroll-view class="recommendScroll" enable-flex="true" scroll-x="true">
+            <view class="scrollItem" wx:for="{{recommendList}}">
+                <image src="{{item.picUrl}}"></image>
+                <text>{{item.name}}</text>
+            </view>
+        </scroll-view>
     </view>
-    <view class="uploader-container" wx:if="{{imgUrl}}">
-      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
-    </view>
-  </view>
-
-
-  <!-- 操作数据库 -->
-  <view class="uploader">
-    <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
-      <text>前端操作数据库</text>
-    </navigator>
-  </view>
-
-  <!-- 即时通信 -->
-  <view class="uploader">
-    <navigator url="../im/im" open-type="navigate" class="uploader-text">
-      <text>即时通信 Demo</text>
-    </navigator>
-  </view>
-
-  <!-- 新建云函数 -->
-  <view class="uploader">
-    <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
-      <text>快速新建云函数</text>
-    </navigator>
-  </view>
-
-  <!-- 云调用 -->
-  <view class="uploader">
-    <navigator url="../openapi/openapi" open-type="navigate" class="uploader-text">
-      <text>云调用</text>
-    </navigator>
-  </view>
-
-
+    <!-- 推荐歌曲 -->
 </view>
