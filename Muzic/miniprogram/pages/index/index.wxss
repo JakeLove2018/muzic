@@ -60,6 +60,7 @@
 }
 .recommendScroll{
     display: flex;
+    height: 340rpx;
 }
 .scrollItem{
     width:200rpx;
@@ -83,4 +84,40 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+}
+.topListSwiper{
+    height: 460rpx;
+}
+.topList{
+    padding: 20rpx;
+}
+.swiperItem{
+    width: 96%;
+    background: #fbfbfb;
+}
+.swiperItem .title{
+    font-size: 30rpx;
+    line-height: 80rpx;
+    margin-left: 15rpx;
+}
+
+.musicItem{
+    display: flex;
+    line-height: 100rpx;
+    padding: 10rpx;
+}
+.musicItem image{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 10rpx; 
+}
+.musicItem .count{
+    width: 100rpx;
+    height: 100rpx;
+    
+    text-align: center;
+}
+.musicItem .musicName{
+    height: 100rpx;
+    margin-bottom: 20rpx;
 }

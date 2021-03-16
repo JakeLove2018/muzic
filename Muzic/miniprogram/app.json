@@ -1,16 +1,46 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/im/im",
-    "pages/im/room/room"
-  ],
-  "window": {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#E34343",
-    "navigationBarTitleText": "Muzic云音乐",
-    "navigationBarTextStyle": "white"
-  },
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+    "pages": [
+      "pages/personal/index",
+        "pages/index/index",
+        "pages/video/index",
+        
+        "pages/im/im",
+        "pages/im/room/room"
+        
+    ],
+    "window": {
+        "backgroundColor": "#F6F6F6",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#E34343",
+        "navigationBarTitleText": "Muzic云音乐",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+      "list": [{
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "/image/首页-1.png",
+        "selectedIconPath": "/image/首页.png"
+      },
+      {
+        "pagePath": "pages/video/index",
+        "text": "视频",
+        "iconPath": "/image/视频.png",
+        "selectedIconPath": "/image/视频-1.png"
+      },
+      {
+        "pagePath": "pages/personal/index",
+        "text": "个人中心",
+        "iconPath": "/image/个人.png",
+        "selectedIconPath": "/image/个人-1.png"
+      }
+    ],
+    "color": "black",
+    "backgroundColor": "#ffffff",
+    "borderStyle":"black"
+
+},
+    "sitemapLocation": "sitemap.json",
+    "style": "v2"
+    
 }
