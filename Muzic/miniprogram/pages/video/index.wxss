@@ -1,1 +1,29 @@
-/* miniprogram/pages/video/index.wxss */
+.videoContainer .header{
+    display: flex;
+    margin: 10rpx 10rpx;
+
+}
+.videoContainer .header image{
+    width: 60rpx;
+    height: 60rpx;
+}
+.videoContainer .header .search{
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 60rpx;
+    flex: 1;
+    margin: 0 20rpx;
+}
+.navScroll{
+    display: flex;
+    white-space: nowrap;
+}
+.navScroll .navItem{
+    padding: 0 30rpx;
+    font-size: 35rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.navItem .active{
+    border-bottom: 3rpx solid #d43c33;
+}

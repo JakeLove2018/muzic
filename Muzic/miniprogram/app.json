@@ -1,22 +1,22 @@
 {
-    "pages": [
-      "pages/personal/index",
-        "pages/index/index",
-        "pages/video/index",
-        
-        "pages/im/im",
-        "pages/im/room/room"
-        
-    ],
-    "window": {
-        "backgroundColor": "#F6F6F6",
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#E34343",
-        "navigationBarTitleText": "Muzic云音乐",
-        "navigationBarTextStyle": "white"
-    },
-    "tabBar": {
-      "list": [{
+  "pages": [
+    "pages/video/index",
+    "pages/personal/index",
+    "pages/login/index",
+    "pages/index/index",
+    "pages/im/im",
+    "pages/im/room/room"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#E34343",
+    "navigationBarTitleText": "Muzic云音乐",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
         "pagePath": "pages/index/index",
         "text": "主页",
         "iconPath": "/image/首页-1.png",
@@ -37,10 +37,8 @@
     ],
     "color": "black",
     "backgroundColor": "#ffffff",
-    "borderStyle":"black"
-
-},
-    "sitemapLocation": "sitemap.json",
-    "style": "v2"
-    
+    "borderStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
 }

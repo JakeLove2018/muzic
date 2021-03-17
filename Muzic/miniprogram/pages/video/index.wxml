@@ -1,2 +1,13 @@
-<!--miniprogram/pages/video/index.wxml-->
-<text>miniprogram/pages/video/index.wxml</text>
+<view class="videoContainer">
+    <view class="header">
+        <image src="../../image/人物.png"></image>
+        <view class="search">搜索歌曲</view>
+        <image src="../../image/网易云.png"></image>
+    </view>
+    <scroll-view scroll-x="true" class="navScroll" enable-flex="true">
+        <view class="navItem" wx:for="{{videoGroupList}}" wx:key="id">
+            <view class="navContent {{navId === item.id ? 'active':''}}" bindtap="changeNav" id="{{item.id}}" data-id="{{item.id}}">{{item.name}}</view>
+        </view>
+    </scroll-view>
+    
+</view>

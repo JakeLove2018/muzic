@@ -213,7 +213,7 @@
   /* 最近播放记录 */
   .recentScroll {
     display: flex;
-    height: 200rpx;
+    height: 320rpx;
   }
   .recentItem {
     margin-right: 20rpx;
@@ -222,6 +222,15 @@
   .recentItem image {
     width: 200rpx;
     height: 200rpx;
-    border-radius: 10rpx;
+    border-radius: 15rpx;
+  }
+  .playlistName{
+    display: block;
+    height: 100rpx; 
+    font-size: 30rpx;
+    white-space:wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
   }
   
